@@ -15,6 +15,7 @@ class Calculator extends Component {
             })
     }
 
+
     addNums = () => {
         this.setState(prevState => (
             {sum: prevState.num1 + prevState.num2}
@@ -29,16 +30,14 @@ class Calculator extends Component {
 
                 <div className="add">
                     <input 
-                        type="number" 
+                        type="text" 
                         placeholder="Enter your first number" 
-                        value={this.state.num1} 
                         onChange={ (e) => this.setNum(e, 'num1') } 
                     />
                     <span>+</span>
                     <input 
-                        type="number" 
+                        type="text" 
                         placeholder="Enter your second number" 
-                        value={this.state.num2} 
                         onChange={ (e) => this.setNum(e, 'num2') } 
                     />
                     <button onClick={this.addNums}>=</button>
